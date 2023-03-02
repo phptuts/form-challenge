@@ -11,13 +11,13 @@
 {:else}
 	<form method="POST">
 		<label for="width">Width</label>
-		<input id="width" value={form?.width} type="number" name="width" />
+		<input id="width" type="number" name="width" value={form?.width === 0 ? '' : form?.width} />
 		{#if form && form.error_width}
 			<p>{form.error_width}</p>
 		{/if}
 		<br />
 		<label for="height">Height</label>
-		<input id="height" value={form?.height} type="number" name="height" />
+		<input id="height" type="number" name="height" value={form?.height === 0 ? '' : form?.height} />
 		{#if form && form.error_height}
 			<p>{form.error_height}</p>
 		{/if}
